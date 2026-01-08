@@ -1,0 +1,70 @@
+Array
+(
+    [0] => Spot Object
+        (
+            [spotID:Spot:private] => 205
+            [kampanjaID:Spot:private] => 
+            [spotName:Spot:private] => Prvi spot
+            [spotLink:Spot:private] => 
+            [glasID:Spot:private] => 5
+            [spotTrajanje:Spot:private] => 17
+            [ucestalost:Spot:private] => 15
+            [daniZaEmitovanje:Spot:private] => [1,2,3,4,5,6,7]
+            [periodiZaEmitovanje:Spot:private] => [1,2,3]
+            [dani:Spot:private] => Array
+                (
+                    [0] => 1
+                    [1] => 2
+                    [2] => 3
+                    [3] => 4
+                    [4] => 5
+                    [5] => 6
+                    [6] => 7
+                )
+
+            [periodi:Spot:private] => Array
+                (
+                    [0] => 1
+                    [1] => 2
+                    [2] => 3
+                )
+
+            [premiumBlokovi:Spot:private] => 1
+            [korisnikID:Spot:private] => 
+            [vremePostavke:Spot:private] => 
+        )
+
+    [1] => Spot Object
+        (
+            [spotID:Spot:private] => 206
+            [kampanjaID:Spot:private] => 
+            [spotName:Spot:private] => Drugi
+            [spotLink:Spot:private] => 
+            [glasID:Spot:private] => 13
+            [spotTrajanje:Spot:private] => 11
+            [ucestalost:Spot:private] => 10
+            [daniZaEmitovanje:Spot:private] => [1,2,3,4,5,6,7]
+            [periodiZaEmitovanje:Spot:private] => [1,2]
+            [dani:Spot:private] => Array
+                (
+                    [0] => 1
+                    [1] => 2
+                    [2] => 3
+                    [3] => 4
+                    [4] => 5
+                    [5] => 6
+                    [6] => 7
+                )
+
+            [periodi:Spot:private] => Array
+                (
+                    [0] => 1
+                    [1] => 2
+                )
+
+            [premiumBlokovi:Spot:private] => 1
+            [korisnikID:Spot:private] => 
+            [vremePostavke:Spot:private] => 
+        )
+
+)

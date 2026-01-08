@@ -1,0 +1,16 @@
+select
+                    S.SablonID as sablonID,
+                    S.Naziv as naziv,
+                    DATE_FORMAT(S.DatumPocetak,'%d.%m.%Y') as datumPocetak,
+                    DATE_FORMAT(S.DatumZavrsetak,'%d.%m.%Y') as datumZavrsetak,
+                    S.Popust as popust,
+                    concat_ws(' ', K.Ime, K.Prezime) as Uneo,
+                    DATE_FORMAT(S.VremePostavka,'%d.%m.%Y') as vremePostavka,
+                    case 
+                        when A.Aktivan = 1 then 'Aktivan'
+                        when A.Aktivan = 0 then 'Neaktivan'
+                    end as Aktivan
+                    from sablon as S
+                    inner join korisnik as K on S.KorisnikID = K.KorisnikID 
+        where ('' = '' or (S.Naziv like '%%'))
+        and ('' = '' or (S.Aktivan = '')) order by S.Naziv asc 

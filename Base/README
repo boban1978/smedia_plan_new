@@ -1,0 +1,58 @@
+------------------------------------------------------
+  AbstractDB - PHP Database Abstraction Class
+------------------------------------------------------
+
+Developer: Pacific-Cybersoft
+      Web: http://www.pacific-cybersoft.com
+Copyright: (C) 2005 Pacific-Cybersoft. All Rights Reserved.
+  License: GNU LGPL - see LICENSE and further details below.
+  Version: 1.0.2
+
+AbstractDB is a PHP database abstraction layer, objected oriented and 
+extensible via driver implementations which extend from a common base class.
+
+This package encapsulates all of the basic functions required by most 
+developers without the complexity and/or utter simplicity of many other 
+abstraction packages.
+
+Incorporating AbstractDB into your applications is as easy as including a 
+single file as such:
+
+include("path/to/abstractdb/abstractdb.class.php");
+
+AbstractDB will handle locating and loading the required driver classes itself.
+
+For installation instructions see the INSTALL file.
+For license details see the LICENSE file.
+For development history see the CHANGELOG file.
+
+AbstractDB is distributed with a manual generated with phpDocumentor 
+(http://www.phpdoc.org) which is available in HTML, PDF and CHM (Windows Help) 
+formats. You can find the manuals in the /docs directory.
+
+AbstractDB is an Open Source project. We are always on the lookout for 
+developers willing to contribute small amounts of time to the development and 
+enhancement of this package, especially in the area of driver development. If 
+you would be interested in contributing please feel free to contact us at
+spambox at pacific-cybersoft dot com.
+
+Please also report bugs and/or feature requests to the above mentioned email 
+address.
+
+This library is free software; you can redistribute it and/or modify it under 
+the terms of the GNU Lesser General Public License as published by the Free 
+Software Foundation; either version 2.1 of the License, or (at your option) 
+any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT 
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more 
+details.
+
+You should have received a copy of the GNU Lesser General Public License along 
+with this library; if not, write to the Free Software Foundation, Inc., 59 
+Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Known Issues:
+-------------
+- Examples in CHM (Windows Help) documentation are not working.

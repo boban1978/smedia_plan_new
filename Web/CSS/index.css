@@ -1,0 +1,48 @@
+    .main_div
+    {
+        background-color: rgb(255,255,255);
+        background-image: url('../images/login.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 700px;
+        height: 400px;
+        margin: 100px auto;
+    }
+    .inputs_div
+    {
+        position: absolute;
+        margin-left: 385px;
+        margin-top: 95px;
+        width: 250px;
+        height: 130px;
+    }
+    .message_div
+    {
+        position: absolute;
+        margin-left: 385px;
+        margin-top: 235px;
+        width: 450px;
+        height: 30px;
+    }
+    .inputs_table
+    {
+        width: 100%;
+        margin-top: 5px;
+    }
+    p
+    {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 10px;
+        color: #999797;
+        font-weight: bold;
+        padding: 1px;
+    }
+    .button
+    {
+        margin-top: 3px;
+        background-color: transparent;
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 10px;
+        color: #999797;
+        font-weight: bold;
+    }

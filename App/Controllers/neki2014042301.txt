@@ -1,0 +1,40 @@
+select 
+                    K.KampanjaID,
+                    R.Naziv as RadioStanica,
+                    K.Naziv as Naziv,
+                    KL.Naziv as Klijent,
+                    DATE_FORMAT(K.DatumPocetka,'%d.%m.%Y') as DatumPocetka,
+                    DATE_FORMAT(K.DatumKraja,'%d.%m.%Y') as DatumKraja,
+                    F.Naziv as FinansijskiStatus,
+                    A.Naziv as Agencija,
+                    concat_ws(' ', K1.Ime, K1.Prezime) as KorisnikUneo,
+                    K.PrilogIzjava,
+                    K.UkupnoSekundi as SpotTrajanje,
+                    K.GratisSekunde,
+                    K.CenaUkupno,
+                    K.CenaKonacno,
+                    B.Naziv as Brend,
+                    KN.Naziv as NacinPlacanja,
+                    S.Naziv as Status,
+                    K.VremeZaPotvrdu,
+                    K.VremePostavke,
+                    K.VremePotvrde,
+                    concat_ws(' ', K2.Ime, K2.Prezime) as KorisnikPotvrda
+                    from kampanja as K
+                    left outer join finansijskistatuskampanja as F on K.FinansijskiStatusID = F.FinansijskiStatusKampanjaID
+                    left outer join korisnik as K1 on K.KorisnikID = K1.KorisnikID
+                    left outer join radiostanica R on K.RadioStanicaID = R.RadioStanicaID
+                    left outer join agencija as A on K.AgencijaID = A.AgencijaID
+                    left outer join klijent as KL on K.KlijentID = KL.KlijentID
+                    left outer join brend as B on K.BrendID = B.BrendID
+                    left outer join korisnik as K2 on K.KorisnikPotvrdaID = K2.KorisnikID
+                    left outer join kampanjanacinplacanja as KN on K.KampanjaNacinPlacanjaID = KN.KampanjaNacinPlacanjaID
+                    left outer join statuskampanja as S on K.StatusKampanjaID = S.StatusKampanjaID
+                where ('' = '' or (K.Naziv like '%%'))
+                and ('' = '' or (K.DatumPocetka >= ''))   
+                and ('' = '' or (K.DatumPocetka <= ''))  
+                and (null is null or (K.StatusKampanjaID = null))  
+                and (1532 is null or (K.KlijentID = 1532))
+                and (null is null or (K.KampanjaNacinPlacanjaID = null))and (1 is null  or 1 = 1
+                or (1 = 2 and (K.KlijentID = (select KlijentID from korisnik where KorisnikID = '57')))
+                or (1 = 3 and (K.AgencijaID = (select AgencijaID from korisnik where KorisnikID = '57')))) order by K.VremePostavke desc 

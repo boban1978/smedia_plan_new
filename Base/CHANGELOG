@@ -1,0 +1,53 @@
+  version 1.0.2 (Released 17/03/2005)
+--------------------------------------------
+- Removed the result handle parameter from GetAffectedRows. This parameter 
+  was never required.
+- Private method IsResource now sets an error if the $resource parameter is 
+  not a valid resource.
+- Added a method to main class and drivers to get the values in the first 
+  column of a result set; FetchResultColumn()
+- Added a method to main class and drivers to query and get the values in the 
+  first column of a result set; QueryColumn()
+- Added a method to main class and drivers to get the value in the first 
+  column of the first row of a result set; FetchResultField()
+- Added a method to main class and drivers to query and get the value in the 
+  first column of the first row of a result set; QueryField()
+- Changed license from GNU General Public License to GNU Lesser General Public 
+  License. This is due to the fact that AbstractDB is planned to be included
+  in future commercial applications developed by Pacific-Cybersoft.
+    
+  version 1.0.1 (Released 14/03/2005)
+--------------------------------------------
+- Added the ability to connect to database servers without a Hostname, 
+  Username or Password. These are no longer required arguments.
+
+  version 1.0.0 (Released 13/03/2005)
+--------------------------------------------
+- Fixed a bug in the connection argument parser that was incorrectly parsing 
+  the Username and Hostname arguments.
+- Better handling of driver results and return values for all methods that 
+  fetch result sets.
+- Added a private method to the main class that checks a given variable is a 
+  resource. Used in all methods that accept a resource as a parameter.
+- Removed the $rs parameter from the GetInsertID method. Not needed.
+- Added usage examples.
+  
+  version 0.1.1 Alpha (Released 08/03/2005)
+--------------------------------------------
+- Added a method to main class and drivers to get the current database name; 
+  GetDatabase()
+- Added a method to main class and drivers to get the field count; 
+  GetFieldCount()
+- Added a method to main class and drivers to get the names of field returned 
+  by a query; GetFieldNames()
+- Added a method to main class and drivers to get the number of rows returned 
+  by a query; GetRowCount()
+- Added a method to main class and drivers to execute REPLACE queries; 
+  Replace()
+- Added a method to main class and drivers to set the name of the current 
+  active database; SetDatabase()
+- Several documentation error ammendments
+
+  version 0.1.0 Alpha (Released 06/03/2005)
+--------------------------------------------
+- initial pre version 1 alpha release with MySQL Driver

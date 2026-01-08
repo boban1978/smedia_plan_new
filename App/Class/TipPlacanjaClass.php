@@ -1,0 +1,147 @@
+<?php
+
+/**
+ * Description of RolaClass
+ *
+ * @author Boban Djordjevic
+ */
+class TipPlacanjaClass {
+    
+    public function TipPlacanjaGetForComboBox(TipPlacanja $object) {
+        $dbBroker = new CoreDBBroker();
+        $result = $dbBroker->getDataForComboBox($object);
+        $responseNew = new CoreAjaxResponseInfo();
+        if ($result) {
+            $responseNew->SetSuccess('true');
+            $responseNew->SetData('rows:'.json_encode($result['rows']));
+        }
+        else {
+            $responseNew->SetSuccess('false');
+            $responseNew->SetMessage(CoreError::getError());
+        }
+        return $responseNew;
+    }
+    
+    public function TipPlacanjaLoad(TipPlacanja $tipPlacanja) {
+        $query = "select 
+                    T.TipPlacanjaID as tipPlacanjaID,
+                    T.Naziv as naziv,
+                    case 
+                        when T.Aktivan = 1 then 'true'
+                        when T.Aktivan = 0 then 'false'
+                    end as aktivan
+                    from tipplacanja as T
+                    where T.tipPlacanjaID = ".$tipPlacanja->getTipPlacanjaID();
+        $dbBroker = new CoreDBBroker();
+        $result = $dbBroker->selectOneRow($query);
+        $responseNew = new CoreAjaxResponseInfo();
+        if ($result) {
+            $responseNew->SetSuccess('true');
+            $responseNew->SetData('data:'.json_encode($result));
+        }
+        else {
+            $responseNew->SetSuccess('false');
+            $responseNew->SetMessage(CoreError::getError());
+        }
+        $dbBroker->close();
+        return $responseNew;
+    }
+    /*
+    public function TipPlacanjaInsert(TipUgovora $tipPlacanja){
+        $dbBroker = new CoreDBBroker();
+        $dbBroker->beginTransaction();
+        $result = $dbBroker->insert($tipPlacanja);
+        $responseNew = new CoreAjaxResponseInfo();
+        if ($result) {
+            $dbBroker->commit();
+            $responseNew->SetSuccess('true');
+            $responseNew->SetMessage("Uspešno insertovan tip Placanja");
+        }
+        else {
+            $dbBroker->rollback();
+            $responseNew->SetSuccess('false');
+            $responseNew->SetMessage(CoreError::getError());
+        }
+        $dbBroker->close();
+        return $responseNew;
+    }
+    
+    public function TipUgovoraUpdate(TipUgovora $tipUgovora) {
+        $dbBroker = new CoreDBBroker();
+        $dbBroker->beginTransaction();
+        $condition = " TipUgovoraID = ".$tipUgovora->getTipUgovoraID();
+        $result = $dbBroker->update($tipUgovora, $condition);
+        $responseNew = new CoreAjaxResponseInfo();
+        if ($result) {
+            $dbBroker->commit();
+            $responseNew->SetSuccess('true');
+            $responseNew->SetMessage("Uspešno izmenjen tip ugovora");
+        }
+        else {
+            $dbBroker->rollback();
+            $responseNew->SetSuccess('false');
+            $responseNew->SetMessage(CoreError::getError());
+        }
+        $dbBroker->close();
+        return $responseNew;
+    }
+    
+    //Funkcija za brisanje 
+    public function TipUgovoraDelete(TipUgovora $tipUgovora) {
+        $dbBroker = new CoreDBBroker();
+        $dbBroker->beginTransaction();
+        $condition = " TipUgovoraID = ".$tipUgovora->getTipUgovoraID();
+        $result = $dbBroker->delete($tipUgovora, $condition);
+        $responseNew = new CoreAjaxResponseInfo();
+        if ($result) {
+            $dbBroker->commit();
+            $responseNew->SetSuccess('true');
+            $responseNew->SetMessage("Uspešno obrisana stavka");
+        }
+        else {
+            $dbBroker->rollback();
+            $responseNew->SetSuccess('false');
+            $responseNew->SetMessage(CoreError::getError());
+        }
+        $dbBroker->close();
+        return $responseNew;
+    }
+    
+
+    public function TipUgovoraGetList(FilterTipUgovora $filter) {
+        $query = "select 
+                    T.TipUgovoraID,
+                    T.Naziv,
+                    case 
+                        when T.Aktivan = 1 then 'Aktivan'
+                        when T.Aktivan = 0 then 'Neaktivan'
+                    end as Aktivan
+                    from tipugovora as T
+        where ('$filter->nazivFilter' = '' or (T.Naziv like '%$filter->nazivFilter%'))
+        and ('$filter->aktivanFilter' = '' or (T.Aktivan = '$filter->aktivanFilter')) ";
+        if ($filter->sort != '') {
+            $querySort = " order by $filter->sort $filter->dir";
+        } else {
+            $querySort = " order by T.Naziv asc ";
+        }
+        $query .= $querySort;
+        $dbBroker = new CoreDBBroker();
+        $result = $dbBroker->selectManyRows($query, $filter->start, $filter->limit);
+        $responseNew = new CoreAjaxResponseInfo();
+        if ($result || $result===0) {
+            $responseNew->SetSuccess('true');
+            if ($result <> 0) {
+                $responseNew->SetData('rows:'.json_encode($result['rows']).', total:'.$result['numRows']);
+            }
+        }
+        else {
+            $responseNew->SetSuccess('false');
+            $responseNew->SetMessage(CoreError::getError());
+        }
+        $dbBroker->close();
+        return $responseNew;
+    }
+    */
+}
+
+?>

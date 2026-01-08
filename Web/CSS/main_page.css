@@ -1,0 +1,29 @@
+	.zaglavlje {
+		width:100%;
+		height:60px;
+	}
+	.general-div {
+		border: 1px solid gray;
+		margin-left:10px;
+		margin-right:10px;
+		padding:10px;
+	}
+	.listTable {
+		background:white;
+		font-family: arial, verdana, arial, helvetica, sans-serif; font-size: 12px; color:#666;
+		font-weight:bold;
+	    width:95%;
+	    text-align:center;
+	    vertical-align:middle;
+	}
+	img {
+		cursor:hand;
+	}
+	a {
+		cursor:hand;
+		font-family: arial, verdana, helvetica, sans-serif; font-size: 12px; color:#666;
+	}
+	.textbold {
+		font-family: arial, verdana, arial, helvetica, sans-serif; font-size: 12px; color:#666;
+		font-weight:bold;
+	}

@@ -1,0 +1,13 @@
+------------------------------------------------------
+  AbstractDB Installation Instructions
+------------------------------------------------------
+1) Upload all of the files extracted from the distribution file onto your web 
+   server. Ensure that the drivers sub directory is in the same directory as 
+   the abstractdb.class.php and abstractdb_driver.class.php files.
+   
+2) Include the abstractdb.class.php file wherever you need to use AbstractDB 
+   functionality.
+   
+   include("path/to/abstractdb/abstractdb.class.php");
+   
+   AbstractDB will handle locating and loading the required driver classes.

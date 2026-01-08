@@ -1,0 +1,126 @@
+	.zaglavlje {
+		width:100%;
+		height:60px;
+	}
+.tabovi {
+    marrgin-left:10px;
+    margin-right:10px;
+    background-image:url('../../images/linija.png');
+    background-repeat:repeat-x;
+    background-position:bottom left;
+    height:30px;
+    cellpadding:0px;
+    cellspacing:0px;
+}
+.general-div {
+    border: 1px solid gray;
+    marrgin-left:10px;
+    margin-right:10px;
+    padding:10px;
+}
+
+
+.simpleTable {
+        font-family: arial, verdana, arial, helvetica, sans-serif; font-size: 12px; color:black;
+        border-collapse: collapse;
+}
+.simpleTable th {
+        background-color:rgb(136,175,223);
+        text-align:left;
+}
+.simpleTable.textbold {
+        font-weight:bold;
+}
+.simpleTable tr.odd td {
+        background-color:rgb(254,226,226);
+}
+.simpleTable td.left {
+        text-align:left;
+        width:200px;
+}
+.simpleTable td.right {
+        text-align:right;
+        width:200px;
+}
+.dugme {
+        font-family:  verdana, arial, helvetica, sans-serif; font-size: 10px; color:#666;
+    font-weight:bold;
+}
+
+  
+.white .x-window-mc {
+   background-color: white;
+}
+         
+         
+.menuLinkText 
+{
+    cursor:hand; font-family: tahoma,arial,verdana,sans-serif; color: #367CCC; font-size: 12px; vertical-align:middle;
+}
+
+.menuLinkText:hover
+{
+    text-decoration: underline; color:gray;
+}
+
+.menuLinkImage
+{
+    border-style: none; margin-left:10px; vertical-align:middle;
+}
+
+
+.dialogUserAdministrationHeader
+{
+	border-bottom: 2px solid #c6d4e4;
+        background-image:url('../Images/Icons/user_profile_48.png');
+	margin-bottom: 20px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 55px;
+}
+
+.commercialSlotOther {
+	background-color: red;
+}
+
+.commercialBlockColor0 {
+	background-color: #FFFFFF;
+}
+
+.commercialBlockColor1 {
+	background-color: #1C86EE;
+}
+.commercialBlockColor2 {
+	background-color: #00FF7F;
+}
+.commercialBlockColor3 {
+	background-color: #FFFF00;
+}
+.commercialBlockColor4 {
+	background-color:#CD8500;
+}
+.commercialBlockColor5 {
+	background-color:#8B7D6B;
+}
+.commercialBlockColor6 {
+	background-color:#CD3700;
+}
+.commercialBlockColor7 {
+	background-color:#848484;
+}
+.commercialBlockColor8 {
+	background-color:#575757;
+}
+
+.textBold {
+	font-weight: bold;
+}
+
+.verticalSpacer10 {
+	margin-bottom: 10px;
+}
+
+
+
+
+
